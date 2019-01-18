@@ -2,7 +2,7 @@ const path = require("path")
 
 module.exports = {
   entry: {
-    bundle: "./src/index.js"
+    bundle: "./src/index.ts"
   },
 
   output: {
@@ -10,13 +10,13 @@ module.exports = {
     path: path.resolve(__dirname, "public")
   },
 
-  mode: "production",
+  mode: "development",
   devtool: "source-map",
 
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(ts|js)$/,
         exclude: [
           /node_modules/
         ],
